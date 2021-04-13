@@ -1,0 +1,16 @@
+ALGORITHM sort
+VAR
+    i,j:INTEGER
+    arr: : ARRAY_OF INTEGER
+BEGIN
+    FOR i FROM 1 TO max STEP arr.length-1 DO
+        j=i-1
+        current=arr[i]
+        WHILE (j>=0 and arr[j]>current) DO
+            arr[j+1]:=arr[j]
+            j=j-1
+        END_WHILE
+        arr[j+1]=current
+    END_FOR
+    
+END
